@@ -7,13 +7,13 @@ import { getFirestore } from "firebase/firestore";
 
 // Initialize Firebase using environment variables
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_APIKEY,
-  authDomain: import.meta.env.VITE_AUTHDOMAIN,
-  projectId: import.meta.env.VITE_PROJECTID,
-  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
-  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
-  appId: import.meta.env.VITE_APPID,
-  measurementId: import.meta.env.VITE_MEASUREMENTID
+  apiKey: "AIzaSyAPFbq1VsZP3k-TqXscXE2z_dZFwfRdxxA",
+  authDomain: "iqbike-b1e1d.firebaseapp.com",
+  projectId: "iqbike-b1e1d",
+  storageBucket: "iqbike-b1e1d.appspot.com",
+  messagingSenderId: "292803515667",
+  appId: "1:292803515667:web:efeb65071cc17ff359f6e6",
+  measurementId: "G-4N0LWPZ514"
 };
 
 // Initialize Firebase
