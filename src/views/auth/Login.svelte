@@ -11,6 +11,7 @@
   async function handleLogin(event) {
     event.preventDefault();
     console.log(email + password);
+    navigate("/admin/dashboard");
     try {
       await authHandlers.login(email, password);
 
@@ -30,7 +31,6 @@
       });
 
       console.log(userDoc);
-      navigate("/admin/dashboard");
 
       if (userDoc && userDoc.exists()) { // && userDoc.data().isAdmin
         navigate("/admin/dashboard");
