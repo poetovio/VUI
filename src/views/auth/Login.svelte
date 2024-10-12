@@ -1,6 +1,6 @@
 <script>
   import { navigate } from "svelte-routing";
-  import { query, where, doc, getDoc, collection } from "firebase/firestore";
+  import { query, where, doc, getDoc, getDocs, collection } from "firebase/firestore";
 
   import { auth, db } from "../../lib/firebase/firebase.client";
   import { authStore, authHandlers } from "../../stores/authStore";
