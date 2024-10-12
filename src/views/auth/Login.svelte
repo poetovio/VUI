@@ -30,6 +30,7 @@
       });
 
       console.log(userDoc);
+      navigate("/admin/dashboard");
 
       if (userDoc && userDoc.exists()) { // && userDoc.data().isAdmin
         navigate("/admin/dashboard");
