@@ -31,7 +31,7 @@
 
       console.log(userDoc);
 
-      if (userDoc && userDoc.exists()) { # && userDoc.data().isAdmin
+      if (userDoc && userDoc.exists()) { // && userDoc.data().isAdmin
         navigate("/admin/dashboard");
       } else {
         await authHandlers.logout();
