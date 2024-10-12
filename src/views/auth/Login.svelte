@@ -20,7 +20,7 @@
         ...store,
         currentUser: user,
       }));
-      const userDoc = await getDoc(doc(collection(db, "uporabniki"), user.uid));
+      const userDoc = await getDoc(doc(collection(db, "uporabniki"), email));
 
       if (userDoc.exists() && userDoc.data().isAdmin) {
         navigate("/admin/dashboard");
