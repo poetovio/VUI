@@ -5,16 +5,15 @@ import { deleteApp, getApp, initializeApp, getApps } from "firebase/app";
 import { getAuth, setPersistence, inMemoryPersistence } from 'firebase/auth';
 import { getFirestore } from "firebase/firestore";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Initialize Firebase using environment variables
 const firebaseConfig = {
-  apiKey: "AIzaSyAEaPjF0W6AotX3ncQxIdfetuLqQTo01OQ",
-  authDomain: "picikl-f9b68.firebaseapp.com",
-  projectId: "picikl-f9b68",
-  storageBucket: "picikl-f9b68.appspot.com",
-  messagingSenderId: "47325884079",
-  appId: "1:47325884079:web:beb290617c7a4d7cbaee5a",
-  measurementId: "G-RZVBV85HDZ"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
+  measurementId: import.meta.env.VITE_MEASUREMENTID
 };
 
 // Initialize Firebase
