@@ -23,7 +23,7 @@
   import Maps from "views/admin/Maps.svelte";
   import { onMount } from "svelte";
 
-  let isLoading = true;
+  let isLoading = false; //true
   let steviloPostajalisc = null;
   let steviloKoles = null;
   let steviloIzposoj = null;
