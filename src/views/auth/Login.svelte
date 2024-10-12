@@ -20,11 +20,18 @@
         ...store,
         currentUser: user,
       }));
-      const userDoc = await getDoc(doc(collection(db, "uporabniki"), "email", email));
+
+      const usersQuery = query(collection(db, "uporabniki"), where("email", "==", email));
+      const querySnapshot = await getDocs(usersQuery);
+
+      let userDoc = null;
+      querySnapshot.forEach((doc) => {
+        userDoc = doc;
+      });
 
       console.log(userDoc);
 
-      if (userDoc.exists() && userDoc.data().isAdmin) {
+      if (userDoc && userDoc.exists() && userDoc.data().isAdmin) {
         navigate("/admin/dashboard");
       } else {
         await authHandlers.logout();
